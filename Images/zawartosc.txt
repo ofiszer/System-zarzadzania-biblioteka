@@ -1,0 +1,1 @@
+Tutaj mają być obrazki używane we frontendzie takie jak ikonka admina czy grafika w tle.
