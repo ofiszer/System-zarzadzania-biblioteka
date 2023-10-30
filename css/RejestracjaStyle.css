@@ -1,0 +1,98 @@
+﻿display-flex, .signup-content, .form-row, .form-radio, .select-icon, .select-icon i {
+    display: -webkit-flex
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+figure {
+    margin: 0
+}
+
+input[type=number] {
+    -moz-appearance: textfield !important;
+    appearance: none !important;
+    -webkit-appearance: none !important
+}
+
+h2 {
+    line-height: 1.66;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: #222;
+    font-family: montserrat;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 32px
+}
+
+.clear {
+    clear: both
+}
+
+body {
+    /*font-size: 13px;*/
+    line-height: 1.8;
+    color: #222;
+    font-weight: 400;
+    /*background: #282828;*/
+    background-image: url('../Images/regal_z_ksiazkami.jpg');
+    /*padding: 90px 0 tutaj jest odstęp w pionie między paskami menu */
+}
+
+.container {
+    width: 1400px;
+    position: relative;
+    margin: 0 auto;
+    background: #fff
+}
+
+.signup-img, .signup-form {
+    width: 50%
+}
+
+.signup-img {
+    margin-bottom: -7px
+}
+
+.register-form {
+    padding: 50px 100px 50px 70px
+}
+
+.form-row {
+    margin: 0 -15px
+}
+
+    .form-row .form-group {
+        width: 50%;
+        padding: 0 15px
+    }
+
+.form-group {
+    margin-bottom: 23px;
+    position: relative
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    padding: 11px 20px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    font-weight: 500;
+}
+
+    input:focus, select:focus {
+        border: 1px solid #ff6801
+    }
+
+label {
+    font-weight: 700;
+    font-family: montserrat;
+    margin-bottom: 2px;
+    display: block
+}

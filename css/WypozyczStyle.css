@@ -1,0 +1,9 @@
+﻿body {
+    background-image: url('../Images/bookshelf2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card1{
+    min-height:800px;
+}

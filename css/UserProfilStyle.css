@@ -1,0 +1,13 @@
+﻿body {
+    background-image: url('../Images/regal_z_ksiazkami.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card1{
+    background-color:white;
+}
+
+#col1 {
+    margin-bottom: 20px;
+}

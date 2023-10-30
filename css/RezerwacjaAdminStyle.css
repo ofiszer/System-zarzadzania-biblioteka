@@ -1,0 +1,13 @@
+﻿body {
+    background-image: url('../Images/wnetrze_biblioteki2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    background: white;
+    border: 4px solid blue; /* Kolor i styl obramowania */
+    padding: 30px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}

@@ -1,0 +1,31 @@
+﻿.container {
+    background-color: lightyellow;
+    font-family: 'Open Sans Condensed';
+}
+
+#div1{
+    
+}
+
+input.TextBox1{
+    background-color: yellow;
+    --s: 10px; /* the spread */
+    --x: 10px; /* X offset */
+    --y: 8px; /* Y offset */
+    position: relative;
+}
+
+#lab1{
+    text-decoration:dashed;
+}
+#card1{
+    border:5px solid aqua;
+    background-color: lightblue;
+}
+#header3{
+
+
+}
+body{
+    background-color: lightgray;
+}

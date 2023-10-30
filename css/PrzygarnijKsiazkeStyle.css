@@ -1,0 +1,48 @@
+﻿.book-info {
+    margin-bottom: 10px;
+}
+
+.book-details {
+    margin-bottom: 10px;
+}
+
+.book-description {
+    margin-bottom: 20px;
+}
+
+    .book-description .col-12 {
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+.card-color1{
+    background-color:lightblue;
+}
+
+.card-color2{
+    background-color: aquamarine;
+}
+
+/* kolumna z nieparzystym indeksem */
+.col-odd {
+    border: 2px solid red;
+}
+
+/* kolumna z parzystym indeksem */
+.col-even {
+    border: 2px solid blue;
+}
+
+/* nieparzyste wiersze */
+.table-striped tbody tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+/* parzyste wiersze */
+.table-striped tbody tr:nth-child(even) {
+    background-color: lightgreen;
+}
+
+body {
+    background-image: url('../Images/regal_z_ksiazkami3.png');
+}
