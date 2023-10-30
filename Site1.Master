@@ -1,0 +1,198 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="BibliotekaWebAppNoAuth.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <%-- <style>
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    </style>--%>
+    <title></title>
+    <%--bootstrap.css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables.css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome.css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+
+    <%--CustomStyleSheet1.css--%>
+    <link href="css/CustomStyleSheet1.css" rel="stylesheet" />
+
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--Datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    var offcanvasElement = document.querySelector('.offcanvas')
+    var offcanvas = new bootstrap.Offcanvas(offcanvasElement)
+</script>
+
+    
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+    }
+</script>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="navbar-brand">
+            <span style="font-size:20px;cursor:pointer" onclick="openNav()"><img src="Images/ksiazka.png" width="30" height="30" /></span>
+            Biblioteka
+            <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#offcanvasExample" aria-controls="offcanvasExample">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <asp:LinkButton class="navlink" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" Visible="False">Dodaj autora</asp:LinkButton>
+            
+                <asp:LinkButton class="navlink" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Logowanie dla Admina</asp:LinkButton>
+                
+                <asp:LinkButton class="navlink" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False">Dodaj wydawcę</asp:LinkButton>
+            
+                <asp:LinkButton class="navlink" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" Visible="False">Dodaj książkę</asp:LinkButton>
+           
+                <asp:LinkButton class="navlink" ID="LinkButton16" runat="server" OnClick="LinkButton16_Click" Visible="False">Książka Szuka Domu</asp:LinkButton>
+
+                <asp:LinkButton class="navlink" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click" Visible="False">Sprawdź wypożyczone</asp:LinkButton>
+            
+                <asp:LinkButton class="navlink" ID="LinkButton17" runat="server"  OnClick="LinkButton17_Click" Visible="False">Sprawdź zarezerwowane</asp:LinkButton>
+
+                <asp:LinkButton class="navlink" ID="LinkButton14" runat="server" OnClick="LinkButton14_Click" Visible="False">Oczekujące na zwrot</asp:LinkButton>
+            
+                <asp:LinkButton class="navlink" ID="LinkButton10" runat="server" OnClick="LinkButton10_Click" Visible="False">Zarządzanie użytkownikami</asp:LinkButton>
+        </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="navlink" href="HomePage.aspx">Strona główna</a>
+                    </li>
+                </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logowanie</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Rejestracja</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton5" runat="server" Visible="False" OnClick="LinkButton5_Click">Wypożycz</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton15" runat="server" Visible="False" OnClick="LinkButton15_Click1">Zwróć</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Książki</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton13" runat="server" Visible="False" OnClick="LinkButton13_Click" >Przygarnij książkę</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton18" runat="server" Visible="False" OnClick="LinkButton18_Click">Rezerwuj książkę</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Wyloguj się</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlink" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">Witaj użytkowniku</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+           
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:gray">&copy Olgierd Fiszer - Seminarium Licencjackie - 6. semestr Inf. Ogólnej</p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </form>
+</body>
+</html>
